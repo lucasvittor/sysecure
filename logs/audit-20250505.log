@@ -1,0 +1,61 @@
+=================================================
+         🛡️ SysSecure Audit v1.0                
+       Sistema rápida de segurança   
+=================================================
+[INFO] Iniciando Sistema de segurança em lucas-pc às Sat May  5 11:40:22 BRT 2025
+
+===== 🔍 Verificação de Atualizações do Sistema =====
+
+[CHECK] Procurando atualizações pendentes...
+Listing... (done)
+libc6/focal-updates 2.31-0ubuntu9.9 amd64 [upgradable from: 2.31-0ubuntu9.8]
+
+===== 🔑 Análise de Senhas e Usuários =====
+
+[CHECK] Verificando comprimento dos hashes de senha...
+user1 possui hash de senha curta ou ausente.
+
+[CHECK] Usuários com shell ativo (/bin/bash):
+lucas
+user1
+admin
+
+===== 🧱 Verificação do Firewall =====
+
+[CHECK] Status do firewall:
+Status: active
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW       Anywhere
+
+===== 🗂️ Permissões e Arquivos Suspeitos =====
+
+[CHECK] Arquivos com permissão 777 no sistema (apenas /home e /tmp):
+-rwxrwxrwx 1 lucas lucas 0 May 4 23:12 /home/lucas/teste.sh
+
+===== 📜 Histórico de Comandos dos Usuários =====
+
+[CHECK] Últimos comandos usados pelos usuários:
+
+lucas:
+cd projetos
+vim main.py
+python3 main.py
+clear
+exit
+
+===== 📡 Portas Abertas e Serviços Escutando =====
+
+[CHECK] Serviços escutando em portas externas:
+Netid  State      Recv-Q Send-Q Local Address:Port  Peer Address:Port 
+tcp    LISTEN     0      128    0.0.0.0:22         0.0.0.0:*           
+tcp    LISTEN     0      128    :::22              :::*               
+
+===== 📝 Gerando Relatório PDF... =====
+
+[INFO] Relatório PDF gerado com sucesso.
+
+===== ✅ Sistema Finalizada =====
+
+[INFO] Relatório salvo em: ./reports/audit-20250505.pdf
+[INFO] Arquivo de log salvo em: ./logs/audit-20250505.log
